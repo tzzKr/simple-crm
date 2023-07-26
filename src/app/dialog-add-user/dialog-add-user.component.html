@@ -1,21 +1,22 @@
+<mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
 <h1 mat-dialog-title>Add User</h1>
 <div mat-dialog-content>
   <p>Add a new user here!</p>
   <div class="input-form-dialog">
     <mat-form-field>
         <mat-label>First Name</mat-label>
-        <input [(ngModel)]="user.firstName" matInput>
+        <input [disabled]="loading" [(ngModel)]="user.firstName" matInput>
       </mat-form-field>
       <mat-form-field>
         <mat-label>Last Name</mat-label>
-        <input [(ngModel)]="user.lastName" matInput>
+        <input [disabled]="loading" [(ngModel)]="user.lastName" matInput>
       </mat-form-field>
   </div>
 
   <div>
     <mat-form-field class="full-width">
         <mat-label>Birth Date</mat-label>
-        <input [(ngModel)]="birthDate" matInput [matDatepicker]="picker">
+        <input [disabled]="loading" [(ngModel)]="birthDate" matInput [matDatepicker]="picker">
         <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
@@ -25,18 +26,18 @@
   <div class="full-width">
     <mat-form-field class="full-width">
         <mat-label>Street + No</mat-label>
-        <input [(ngModel)]="user.street" matInput>
+        <input [disabled]="loading" [(ngModel)]="user.street" matInput>
       </mat-form-field>
   </div>
   
   <div class="input-form-dialog">
     <mat-form-field>
         <mat-label>Zip code</mat-label>
-        <input [(ngModel)]="user.zipCode" matInput>
+        <input [disabled]="loading" [(ngModel)]="user.zipCode" matInput>
       </mat-form-field>
       <mat-form-field>
         <mat-label>City</mat-label>
-        <input [(ngModel)]="user.city" matInput>
+        <input [disabled]="loading" [(ngModel)]="user.city" matInput>
       </mat-form-field>
   </div>
 

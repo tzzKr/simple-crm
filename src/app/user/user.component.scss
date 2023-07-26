@@ -3,3 +3,21 @@
     right: 56px;
     bottom: 56px;
 }
+.user-table{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    align-items: center;
+}
+
+.user-list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.user-info{
+    display: flex;
+    gap: 16px;
+}
