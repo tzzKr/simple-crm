@@ -5,21 +5,21 @@
 <div class="user-list">
  
 
-  <mat-card>
-    <mat-card-content>
+  <mat-card *ngFor="let user of users" [routerLink]="['/user/' + user.id]">
+    <mat-card-content >
       <div class="user-table">
         <div class="user-info">
-          <span>Name</span>
-          <p>Klaus Dorfer</p>
+          <span> <b>Name:</b></span>
+          <p>{{user.firstName}}  {{user.lastName}}</p>
         </div>
         <div class="user-info">
-          <span>E-mail</span>
-          <p>KauseMail@gogele</p>
+          <span> <b>E-mail:</b></span>
+          <p>{{user.email}}</p>
         </div>
 
         <div class="user-info">
-          <span>City</span>
-          <p>Darmstadt</p>
+          <span> <b>City:</b> </span>
+          <p>{{user.city}}</p>
         </div>
       </div>
     </mat-card-content>

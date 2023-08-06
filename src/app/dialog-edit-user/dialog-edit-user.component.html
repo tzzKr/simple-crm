@@ -30,26 +30,8 @@
       </mat-form-field>
   </div>
 
-  <div class="full-width">
-    <mat-form-field class="full-width">
-        <mat-label>Street + No</mat-label>
-        <input [disabled]="loading" [(ngModel)]="user.street" matInput>
-      </mat-form-field>
-  </div>
-  
-  <div class="input-form-dialog">
-    <mat-form-field>
-        <mat-label>Zip code</mat-label>
-        <input [disabled]="loading" [(ngModel)]="user.zipCode" matInput>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>City</mat-label>
-        <input [disabled]="loading" [(ngModel)]="user.city" matInput>
-      </mat-form-field>
-  </div>
-
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">Cancel</button>
-  <button mat-button (click)="saveUser()" cdkFocusInitial>Save</button>
-</div>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button (click)="saveUser()" cdkFocusInitial>Save</button>
+  </div>
