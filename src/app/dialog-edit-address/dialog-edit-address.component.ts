@@ -12,17 +12,26 @@ export class DialogEditAddressComponent implements OnInit {
 
   loading = false;
   user!: User;
+  userId!: string;
+
+  constructor( public dialogRef: MatDialogRef<DialogEditAddressComponent>, private service: Service) { }
+
 
   ngOnInit(): void {
   }
 
   saveUser() {
-    this.dialogRef.close(this.user);
+    this.loading = true;
+    this.service.update(this.userId, this.user).then(() => {
+      console.log('Updated item successfully!');
+      this.loading = false;
+      this.dialogRef.close(this.user);
+
+    });
   }
   onNoClick(){
     this.dialogRef.close();
   }
 
-  constructor( public dialogRef: MatDialogRef<DialogEditAddressComponent>) { }
 
 }
